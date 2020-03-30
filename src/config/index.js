@@ -5,7 +5,7 @@ const baseConfig = {
   env,
   isDev: env === "development",
   isTest: env === "testing",
-  port: 4000
+  port: process.env.PORT || 3000
 };
 
 let envConfig = {};
