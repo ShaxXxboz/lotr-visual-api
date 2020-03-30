@@ -1,1 +1,1 @@
-web: nodemon --exec npm run restart
+web: node dist/index.js
