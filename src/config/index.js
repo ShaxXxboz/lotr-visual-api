@@ -20,7 +20,7 @@ switch (env) {
     envConfig = require("./testing").config;
     break;
   default:
-    envConfig = require("./dev").config;
+    envConfig = require("./prod").config;
 }
 
 export default merge(baseConfig, envConfig);
