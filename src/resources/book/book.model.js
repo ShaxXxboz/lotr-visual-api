@@ -14,10 +14,8 @@ const bookSchema = new mongoose.Schema(
       trim: true,
       maxlength: 255
     },
-    description: String,
     publicationDate: Date,
-    publisherName: String,
-    image: String
+    publisherName: String
   },
   { timestamps: true }
 );

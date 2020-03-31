@@ -2,12 +2,18 @@ import mongoose from "mongoose";
 
 const raceSchema = mongoose.Schema(
   {
-    title: {
+    name: {
       type: String,
       maxlenght: 255,
       required: true
     },
-    description: String
+    dominions: String,
+    languages: String,
+    lifespan: String,
+    distinctions: String,
+    height: String,
+    skinColor: String,
+    hairColor: String
   },
   { timestamps: true }
 );

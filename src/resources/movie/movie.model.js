@@ -15,12 +15,22 @@ const movieSchema = mongoose.Schema(
       type: String,
       required: true
     },
-    description: String,
     budget: {
       type: String,
-      maxlength: 15
+      maxlength: 128
     },
-    image: String
+    musicBy: {
+      type: String,
+      maxlength: 128
+    },
+    distributedBy: {
+      type: String,
+      maxlength: 128
+    },
+    language: {
+      type: String,
+      maxlength: 128
+    }
   },
   { timestamps: true }
 );
