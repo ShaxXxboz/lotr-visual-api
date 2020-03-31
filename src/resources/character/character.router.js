@@ -1,9 +1,17 @@
-import { Router } from 'express'
-import controllers from './character.controllers'
+import { Router } from "express";
+import controllers from "./character.controllers";
 
-const router = new Router()
+const router = new Router();
 
-router.route('/').get(controllers.getMany)
-router.route('/:id').get(controllers.getOne)
+router
+  .route("/")
+  .get(controllers.getMany)
+  .post(controllers.createOne);
 
-export default router
+router
+  .route("/:id")
+  .get(controllers.getOne)
+  .put(controllers.updateOne)
+  .delete(controllers.removeOne);
+
+export default router;

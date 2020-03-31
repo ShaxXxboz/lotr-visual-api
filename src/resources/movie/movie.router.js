@@ -1,9 +1,17 @@
-import { Router } from 'express'
-import controllers from './movie.controllers'
+import { Router } from "express";
+import controllers from "./movie.controllers";
 
-const router = Router()
+const router = Router();
 
-router.route('/').get(controllers.getMany)
-router.route('/:id').get(controllers.getOne)
+router
+  .route("/")
+  .get(controllers.getMany)
+  .post(controllers.createOne);
 
-export default router
+router
+  .route("/:id")
+  .get(controllers.getOne)
+  .put(controllers.updateOne)
+  .delete(controllers.removeOne);
+
+export default router;
