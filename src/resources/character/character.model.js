@@ -11,17 +11,26 @@ const characterSchema = mongoose.Schema(
       type: String,
       maxlenght: 255
     },
-    description: {
-      type: String
-    },
-    birthYear: {
-      type: String,
-      maxlenght: 128
-    },
     raceId: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: "Race"
     },
+    hairColor: {
+      type: String,
+      maxlenght: 64
+    },
+    actor: {
+      type: String,
+      maxlenght: 255
+    },
+    culture: {
+      type: String,
+      maxlenght: 255
+    },
+    weapon: {
+      type: String,
+      maxlenght: 255
+    }
     image: String
   },
   { timestamps: true }
