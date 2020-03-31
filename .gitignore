@@ -63,3 +63,8 @@ typings/
 dist
 
 .DS_Store
+
+books.json
+characters.json
+movies.json
+races.json

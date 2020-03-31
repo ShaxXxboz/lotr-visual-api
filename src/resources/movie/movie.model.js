@@ -30,6 +30,9 @@ const movieSchema = mongoose.Schema(
     language: {
       type: String,
       maxlength: 128
+    },
+    basedOn: {
+      type: mongoose.SchemaTypes.ObjectId
     }
   },
   { timestamps: true }

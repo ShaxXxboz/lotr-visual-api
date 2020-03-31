@@ -7,7 +7,7 @@ const characterSchema = mongoose.Schema(
       required: true,
       maxlenght: 255
     },
-    title: {
+    titles: {
       type: String,
       maxlenght: 255
     },
@@ -27,7 +27,7 @@ const characterSchema = mongoose.Schema(
       type: String,
       maxlenght: 255
     },
-    weapon: {
+    weapons: {
       type: String,
       maxlenght: 255
     }
