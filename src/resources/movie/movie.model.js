@@ -4,11 +4,10 @@ const movieSchema = mongoose.Schema(
   {
     title: {
       type: String,
-      required: true,
-      maxlength: 255
+      required: true
     },
-    releaseYear: {
-      type: Number,
+    releaseDate: {
+      type: String,
       required: true
     },
     director: {
