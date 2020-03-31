@@ -17,8 +17,7 @@ const bookSchema = new mongoose.Schema(
     publicationDate: String,
     genre: String,
     language: String,
-    country: String,
-    isbn: String
+    country: String
   },
   { timestamps: true }
 );
