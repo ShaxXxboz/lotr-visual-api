@@ -13,7 +13,8 @@ const raceSchema = mongoose.Schema(
     distinctions: String,
     height: String,
     skinColor: String,
-    hairColor: String
+    hairColor: String,
+    image: String
   },
   { timestamps: true }
 );

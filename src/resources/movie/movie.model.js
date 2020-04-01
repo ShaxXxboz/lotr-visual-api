@@ -32,7 +32,8 @@ const movieSchema = mongoose.Schema(
     },
     basedOn: {
       type: mongoose.SchemaTypes.ObjectId
-    }
+    },
+    image: String
   },
   { timestamps: true }
 );

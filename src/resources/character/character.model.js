@@ -30,7 +30,8 @@ const characterSchema = mongoose.Schema(
     weapons: {
       type: String,
       maxlenght: 255
-    }
+    },
+    image: String
   },
   { timestamps: true }
 );
