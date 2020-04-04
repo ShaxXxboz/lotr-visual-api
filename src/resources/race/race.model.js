@@ -4,8 +4,7 @@ const raceSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      maxlenght: 255,
-      required: true
+      required: true,
     },
     dominions: String,
     languages: String,
@@ -14,7 +13,7 @@ const raceSchema = mongoose.Schema(
     height: String,
     skinColor: String,
     hairColor: String,
-    image: String
+    image: String,
   },
   { timestamps: true }
 );

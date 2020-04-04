@@ -6,19 +6,17 @@ const bookSchema = new mongoose.Schema(
       type: String,
       required: true,
       trim: true,
-      maxlength: 255
     },
     author: {
       type: String,
       required: true,
       trim: true,
-      maxlength: 255
     },
     publicationDate: String,
     genre: String,
     language: String,
     country: String,
-    image: String
+    image: String,
   },
   { timestamps: true }
 );

@@ -4,36 +4,32 @@ const movieSchema = mongoose.Schema(
   {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     releaseDate: {
       type: String,
-      required: true
+      required: true,
     },
     director: {
       type: String,
-      required: true
+      required: true,
     },
     budget: {
       type: String,
-      maxlength: 128
     },
     musicBy: {
       type: String,
-      maxlength: 128
     },
     distributedBy: {
       type: String,
-      maxlength: 128
     },
     language: {
       type: String,
-      maxlength: 128
     },
     basedOn: {
-      type: mongoose.SchemaTypes.ObjectId
+      type: mongoose.SchemaTypes.ObjectId,
     },
-    image: String
+    image: String,
   },
   { timestamps: true }
 );
