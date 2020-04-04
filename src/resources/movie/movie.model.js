@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const movieSchema = mongoose.Schema(
   {
-    title: {
+    name: {
       type: String,
       required: true,
     },
