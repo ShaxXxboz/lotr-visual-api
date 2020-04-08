@@ -34,4 +34,4 @@ const movieSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-export const Movie = mongoose.model("movie", movieSchema);
+export const Movie = mongoose.model("Movie", movieSchema);

@@ -1,9 +1,5 @@
-import mongoose from "mongoose";
-
 export const getOne = (model) => async (req, res) => {
   try {
-    const ObjectId = mongoose.Types.ObjectId;
-
     const doc = await model
       .findOne({ _id: req.params.id })
       .lean()
