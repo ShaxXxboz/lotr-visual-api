@@ -3,7 +3,7 @@ import controllers from "./movie.controllers";
 
 const router = Router();
 
-router.route("/");
+router.route("/").get(controllers.getMany);
 
 router.route("/:id").get(controllers.getOne);
 

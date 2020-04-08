@@ -8,11 +8,9 @@ const movieSchema = mongoose.Schema(
     },
     releaseDate: {
       type: String,
-      required: true,
     },
     director: {
       type: String,
-      required: true,
     },
     budget: {
       type: String,
@@ -28,6 +26,7 @@ const movieSchema = mongoose.Schema(
     },
     basedOn: {
       type: mongoose.SchemaTypes.ObjectId,
+      ref: "Book",
     },
     image: String,
   },
