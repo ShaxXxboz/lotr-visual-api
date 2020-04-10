@@ -14,7 +14,10 @@ const raceSchema = mongoose.Schema(
     skinColor: String,
     hairColor: String,
     image: String,
-    slug: String
+    slug: {
+      type: String,
+      required: true
+    }
   },
   { timestamps: true }
 );

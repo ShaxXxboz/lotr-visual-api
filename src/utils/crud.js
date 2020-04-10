@@ -1,7 +1,7 @@
-export const getOne = (model) => async (req, res) => {
+export const getOne = model => async (req, res) => {
   try {
     const doc = await model
-      .findOne({ _id: req.params.id })
+      .findOne({ slug: req.params.slug })
       .lean()
       .exec();
 
@@ -16,7 +16,7 @@ export const getOne = (model) => async (req, res) => {
   }
 };
 
-export const getMany = (model) => async (req, res) => {
+export const getMany = model => async (req, res) => {
   try {
     const doc = await model
       .find()
@@ -30,7 +30,7 @@ export const getMany = (model) => async (req, res) => {
   }
 };
 
-export const createOne = (model) => async (req, res) => {
+export const createOne = model => async (req, res) => {
   try {
     const doc = await model.create(req.body);
     if (!doc) {
@@ -43,7 +43,7 @@ export const createOne = (model) => async (req, res) => {
   }
 };
 
-export const updateOne = (model) => async (req, res) => {
+export const updateOne = model => async (req, res) => {
   try {
     const updatedDoc = await model
       .findOneAndUpdate({ _id: req.params.id }, res.body, { new: true })
@@ -61,7 +61,7 @@ export const updateOne = (model) => async (req, res) => {
   }
 };
 
-export const removeOne = (model) => async (req, res) => {
+export const removeOne = model => async (req, res) => {
   try {
     const removedDoc = await model.findAndRemove({ _id: req.params.id });
 
@@ -76,10 +76,10 @@ export const removeOne = (model) => async (req, res) => {
   }
 };
 
-export const crudControllers = (model) => ({
+export const crudControllers = model => ({
   removeOne: removeOne(model),
   updateOne: updateOne(model),
   getMany: getMany(model),
   getOne: getOne(model),
-  createOne: createOne(model),
+  createOne: createOne(model)
 });

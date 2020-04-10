@@ -26,7 +26,10 @@ const characterSchema = mongoose.Schema(
       type: String
     },
     image: String,
-    slug: String
+    slug: {
+      type: String,
+      required: true
+    }
   },
   { timestamps: true }
 );

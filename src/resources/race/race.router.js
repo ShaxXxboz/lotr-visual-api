@@ -5,6 +5,6 @@ const router = Router();
 
 router.route("/").get(controllers.getMany);
 
-router.route("/:id").get(controllers.getOne);
+router.route("/:slug").get(controllers.getOne);
 
 export default router;

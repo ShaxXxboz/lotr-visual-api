@@ -17,7 +17,10 @@ const bookSchema = new mongoose.Schema(
     language: String,
     country: String,
     image: String,
-    slug: String
+    slug: {
+      type: String,
+      required: true
+    }
   },
   { timestamps: true }
 );

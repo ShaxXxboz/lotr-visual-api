@@ -29,7 +29,10 @@ const movieSchema = mongoose.Schema(
       ref: "Book"
     },
     image: String,
-    slug: String
+    slug: {
+      type: String,
+      required: true
+    }
   },
   { timestamps: true }
 );
