@@ -4,31 +4,32 @@ const movieSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     releaseDate: {
-      type: String,
+      type: String
     },
     director: {
-      type: String,
+      type: String
     },
     budget: {
-      type: String,
+      type: String
     },
     musicBy: {
-      type: String,
+      type: String
     },
     distributedBy: {
-      type: String,
+      type: String
     },
     language: {
-      type: String,
+      type: String
     },
     basedOn: {
       type: mongoose.SchemaTypes.ObjectId,
-      ref: "Book",
+      ref: "Book"
     },
     image: String,
+    slug: String
   },
   { timestamps: true }
 );

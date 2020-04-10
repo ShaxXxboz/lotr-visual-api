@@ -5,18 +5,19 @@ const bookSchema = new mongoose.Schema(
     name: {
       type: String,
       required: true,
-      trim: true,
+      trim: true
     },
     author: {
       type: String,
       required: true,
-      trim: true,
+      trim: true
     },
     publicationDate: String,
     genre: String,
     language: String,
     country: String,
     image: String,
+    slug: String
   },
   { timestamps: true }
 );

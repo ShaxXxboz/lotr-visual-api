@@ -4,7 +4,7 @@ const raceSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     dominions: String,
     languages: String,
@@ -14,6 +14,7 @@ const raceSchema = mongoose.Schema(
     skinColor: String,
     hairColor: String,
     image: String,
+    slug: String
   },
   { timestamps: true }
 );
