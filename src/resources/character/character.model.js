@@ -9,7 +9,7 @@ const characterSchema = mongoose.Schema(
     titles: {
       type: String,
     },
-    race: {
+    raceId: {
       type: mongoose.SchemaTypes.ObjectId,
       ref: "Race",
     },
