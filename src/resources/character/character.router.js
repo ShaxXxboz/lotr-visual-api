@@ -1,10 +1,10 @@
 import { Router } from "express";
 import controllers from "./character.controllers";
-/* import { Character } from "./character.model";
+import { Character } from "./character.model";
 
-Character.pre("findOne", function() {
+Character.post("findOne", function() {
   this.populate("raceId");
-}); */
+});
 
 const router = new Router();
 
