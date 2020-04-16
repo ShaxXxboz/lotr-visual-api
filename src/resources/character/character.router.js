@@ -2,7 +2,7 @@ import { Router } from "express";
 import controllers from "./character.controllers";
 import { Character } from "./character.model";
 
-ArticleSchema.pre("findOne", function() {
+Character.pre("findOne", function() {
   this.populate("raceId");
 });
 
