@@ -4,32 +4,32 @@ const characterSchema = mongoose.Schema(
   {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     titles: {
-      type: String
+      type: String,
     },
-    raceId: {
+    race: {
       type: mongoose.SchemaTypes.ObjectId,
-      ref: "Race"
+      ref: "Race",
     },
     hairColor: {
-      type: String
+      type: String,
     },
     actor: {
-      type: String
+      type: String,
     },
     culture: {
-      type: String
+      type: String,
     },
     weapons: {
-      type: String
+      type: String,
     },
     image: String,
     slug: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   { timestamps: true }
 );

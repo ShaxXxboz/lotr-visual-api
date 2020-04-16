@@ -8,6 +8,8 @@ router
   .get(controllers.getMany)
   .post(controllers.createOne);
 
-router.route("/:slug").get(controllers.getOne);
+router
+  .route("/:slug")
+  .get(controllers.getOne.populate("raceId").execPopulate());
 
 export default router;
