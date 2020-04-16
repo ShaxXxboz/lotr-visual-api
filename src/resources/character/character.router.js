@@ -1,10 +1,10 @@
 import { Router } from "express";
 import controllers from "./character.controllers";
-/* import { Character } from './character.model'
+import { Character } from "./character.model";
 
-ArticleSchema.pre('findOne', function () {
-  this.populate('author');
-}); */
+ArticleSchema.pre("findOne", function() {
+  this.populate("raceId");
+});
 
 const router = new Router();
 
@@ -13,8 +13,6 @@ router
   .get(controllers.getMany)
   .post(controllers.createOne);
 
-router
-  .route("/:slug")
-  .get(controllers.getOne.populate("raceId").execPopulate());
+router.route("/:slug").get(controllers.getOne);
 
 export default router;
